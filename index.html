@@ -4,21 +4,22 @@
 
 <div style="height:100%; width:100%; overflow: hidden;">
 
-<div style="float: left; width:50%;">
+<div id="original" style="float: left; width:50%;">
   <p>
     Video in MP4 format
   </p>
-  <video width="400" controls autoplay muted>
+  <video id="originalVideo" width="400" controls autoplay muted>
     <source src="test2.mp4" type="video/mp4">
     Your browser does not support HTML video.
   </video>
+
 </div>
 
-<div style="float: right; width:50%;">
+<div id="encoded" style="float: right; width:50%;">
   <p>
     Video in HEVC mp4 format
   </p>
-  <video width="400" controls autoplay muted>
+  <video id="encodedVideo" width="400" controls autoplay muted>
     <source src="test2HEVC.mp4" type="video/mp4">
     Your browser does not support HTML video.
   </video>
@@ -26,5 +27,11 @@
 
 
 </div>
+
+<script type="text/javascript">
+  const origVideo = document.getElementById('originalVideo')
+  const encodedVideo = document.getElementById('encodedVideo') 
+</script>
+
 </body> 
 </html>
