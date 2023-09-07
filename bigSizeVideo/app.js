@@ -1,5 +1,8 @@
 const intro = document.querySelector('.intro')
 const video = intro.querySelector('video')
+this.videoSource = video.querySelector('source')
+this.mobileSource = this.videoSource.getAttribute('mobile_video') 
+this.videoSource.setAttribute('src', this.mobileSource);
 const text = intro.querySelector('h1')
 
 const section = document.querySelector('section')
@@ -9,7 +12,7 @@ const controller = new ScrollMagic.Controller()
 
 // scenes
 const scene = new ScrollMagic.Scene({
-    duration: 2500,
+    duration: 3400,
     triggerElement: intro,
     triggerHook: 0
 })
@@ -18,7 +21,7 @@ const scene = new ScrollMagic.Scene({
 .addTo(controller)
 
 // video animation
-let accelAmount = 0.1  // like easing
+let accelAmount = 0.2  // like easing
 let scrollPosition = 0
 let delay = 0
 
@@ -38,6 +41,7 @@ scene.on('update', e => {
 console.log('>>> video', video.duration)
 
 setInterval(()=>{
+    console.log('>>> video', video.duration)
     delay += (scrollPosition - delay) * accelAmount
     video.currentTime = delay
 }, 33.3)

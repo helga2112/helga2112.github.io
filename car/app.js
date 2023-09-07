@@ -9,7 +9,7 @@ const controller = new ScrollMagic.Controller()
 
 // scenes
 const scene = new ScrollMagic.Scene({
-    duration: 10000,
+    duration: 4000,
     triggerElement: intro,
     triggerHook: 0
 })
@@ -26,13 +26,13 @@ console.log(video.currentTime);
 console.log(video.preload)
 
 
-scene.on('update', e => {
+/* scene.on('update', e => {
     scrollPosition = e.scrollPos / 1500
     video.currentTime = scrollPosition
-})
+}) */
 
 
-/* scene.on('update', e => {
+scene.on('update', e => {
     scrollPosition = e.scrollPos / 1000
 })
 
@@ -40,4 +40,4 @@ setInterval(()=>{
     delay += (scrollPosition - delay) * accelAmount
     video.currentTime = delay
     console.log("delay", delay.toFixed(2), "scrollPosition",scrollPosition.toFixed(2))
-}, 33) */
+}, 33)
