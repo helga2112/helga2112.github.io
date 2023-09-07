@@ -34,17 +34,18 @@ var rounded = function(number){
     return +number.toFixed(2);
 }
 
-scene.on('update', e => {
+/* scene.on('update', e => {
     scrollPosition = e.scrollPos / 1000
-})
+    video.currentTime = scrollPosition
+}) */
 
 console.log('>>> video', video.duration)
 
-setInterval(()=>{
+/* setInterval(()=>{
     console.log('>>> video', video.duration)
     delay += (scrollPosition - delay) * accelAmount
     video.currentTime = delay
-}, 33.3)
+}, 33.3) */
 
 
 // 1 sec = 1000 millisec 
