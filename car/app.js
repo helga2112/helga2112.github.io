@@ -9,14 +9,14 @@ const video = intro.querySelector("video");
 const text = intro.querySelector("h1");
 
 async function playVideo() {
-  video.setAttribute('autoplay', true)
+  video.setAttribute("autoplay", true);
   setTimeout(() => {
-    video.pause()
-  }, 700);
+    video.pause();
+    video.currentTime = 0;
+  }, 5);
 }
 
-
-playVideo()
+playVideo();
 
 const section = document.querySelector("section");
 const end = section.querySelector("h1");
