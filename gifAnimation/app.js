@@ -1,11 +1,3 @@
-/* var gifFrames = require ('gif-frames');*/
-/* var fs = require('fs'); */
-
-/* import gifFrames from 'gif-frames'
-import fs from 'fs' */
-
-console.log(p5)
-
 const intro = document.querySelector('.intro')
 const car = intro.querySelector('img')
 this.videoSource = car.querySelector('source')
